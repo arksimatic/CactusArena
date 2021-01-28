@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Spikes
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Spikes
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: InGameBackground
+    uniqueID: 300398795
+    locked: 0
+  - name: Brick
+    uniqueID: 1244418623
+    locked: 0
+  - name: Cacti
+    uniqueID: 1652351073
+    locked: 0
+  - name: Character
+    uniqueID: 557190115
+    locked: 0
+  - name: Spikes
+    uniqueID: 2120969453
+    locked: 0
+  - name: AnythingYouTestAndWantOnTheTop
+    uniqueID: 1021862601
+    locked: 0
