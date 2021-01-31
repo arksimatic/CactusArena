@@ -63,10 +63,13 @@
     <Compile Include="Assets\Scripts\BarrierControl.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Audio\SfxVolumeChanger.cs" />
+    <Compile Include="Assets\Scripts\ShowBestScore.cs" />
+    <Compile Include="Assets\Scripts\Countup.cs" />
     <Compile Include="Assets\Scripts\Countdown.cs" />
     <Compile Include="Assets\Scripts\LevelButtonMark.cs" />
     <Compile Include="Assets\SpeedTutor_Full_Menu_System\MenuScripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\Mobs\NormalCactus.cs" />
+    <Compile Include="Assets\Scripts\SaveEndlessScore.cs" />
     <Compile Include="Assets\Scripts\Collectables\GenerateCollectables.cs" />
     <Compile Include="Assets\Scripts\Collectables\Milk.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
@@ -84,17 +87,18 @@
     <Compile Include="Assets\SpeedTutor_Full_Menu_System\MenuScripts\Init_LoadPreferences.cs" />
     <Compile Include="Assets\Scripts\Mobs\ToxicCactus.cs" />
     <Compile Include="Assets\Scripts\Tags.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Collectables\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Collectables\HealthPotion.cs" />
+    <Compile Include="Assets\Scripts\ShowScore.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SceneManipulation\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Mobs\Cactus.cs" />
     <Compile Include="Assets\Scripts\Mobs\FreezingSpike.cs" />
     <Compile Include="Assets\Scripts\SMath.cs" />
-    <Compile Include="Assets\Scripts\Countup.cs" />
-    <Compile Include="Assets\Scripts\SaveEndlessScore.cs" />
-    <Compile Include="Assets\Scripts\ShowBestScore.cs" />
+    <Compile Include="Assets\Scripts\TutorialController.cs" />
+    <Compile Include="Assets\Scripts\CallMeTestScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

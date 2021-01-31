@@ -185,5 +185,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objBullet: {fileID: 64590402067573146, guid: 4ade871572cf33545982b05da45d5fc5, type: 3}
-  objSpikesFolder: {fileID: 0}
   animator: {fileID: 0}

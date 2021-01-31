@@ -14,9 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefabs/LevelButton.prefab
+    - Assets/Graphics/tutorial/_arrier.png
+    - Assets/Graphics/tutorial/_arrier.png.meta
+    - Assets/Graphics/tutorial/_core.png
+    - Assets/Graphics/tutorial/_core.png.meta
+    - Assets/Graphics/tutorial/_hooting.png
+    - Assets/Graphics/tutorial/_hooting.png.meta
+    - Assets/Graphics/tutorial/_hot.png
+    - Assets/Graphics/tutorial/_hot.png.meta
+    - Assets/Graphics/tutorial/_imer.png
+    - Assets/Graphics/tutorial/_imer.png.meta
+    - Assets/Graphics/tutorial/_layer.png
+    - Assets/Graphics/tutorial/_layer.png.meta
+    - Assets/Graphics/tutorial/_luesir.png
+    - Assets/Graphics/tutorial/_luesir.png.meta
+    - Assets/Graphics/tutorial/_ndless.png
+    - Assets/Graphics/tutorial/_ndless.png.meta
+    - Assets/Graphics/tutorial/_ormalsir.png
+    - Assets/Graphics/tutorial/_ormalsir.png.meta
+    - Assets/Graphics/tutorial/_pikes 1.png
+    - Assets/Graphics/tutorial/_pikes 1.png.meta
+    - Assets/Graphics/tutorial/_urplesir.png
+    - Assets/Graphics/tutorial/_urplesir.png.meta
+    - Assets/Graphics/tutorial/barrierActive.png
+    - Assets/Graphics/tutorial/barrierActive.png.meta
+    - Assets/Scenes/Tutorial.unity
     - 
-    m_Values: 0101
+    m_Values: 0000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

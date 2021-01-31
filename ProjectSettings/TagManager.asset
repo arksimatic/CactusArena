@@ -16,7 +16,7 @@ TagManager:
   - 
   - Collectables
   - Spikes
-  - 
+  - Projectiles
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Collectables
     uniqueID: 2638384587
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1021026043
     locked: 0
   - name: Spikes
     uniqueID: 2120969453

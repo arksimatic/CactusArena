@@ -10,6 +10,16 @@ public class ShowBestScore : MonoBehaviour
     private Single currentScore;
     void Start()
     {
+        SetScore();
+    }
+
+    public void NotifyAboutScoreChange()
+    {
+        SetScore();
+    }
+
+    private void SetScore()
+    {
         scoreText = this.gameObject.GetComponent<Text>();
         currentScore = PlayerPrefs.GetFloat("endless");
         scoreText.text = $"Best: {currentScore}s";

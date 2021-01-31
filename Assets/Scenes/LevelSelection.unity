@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelWithButtons: {fileID: 1424598437}
+  Endless: {fileID: 926753912}
 --- !u!114 &1040937889
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,10 +8,51 @@ public abstract class Cactus : MonoBehaviour
     protected GameObject objSpikesFolder;
     public Animator animator;
 
+    public Single MaxHealth = 100;
+    private Single health;
+    private Boolean isStasis = false;
+
     protected Boolean _isBursting = false;
+
+    private void ResetHealth()
+    {
+        Debug.Log("hp reset");
+        health = MaxHealth;
+    }
+
+    private void Update()
+    {
+        Debug.Log(health);
+    }
+
+    public void GetDamage(Single damage)
+    {
+        health -= damage;
+        Debug.Log($"health = {health}");
+        if (health <= 0 && !isStasis)
+            StartCoroutine(Stasis());
+    }
+
+    private IEnumerator Stasis()
+    {
+        isStasis = true;
+
+        yield return new WaitForEndOfFrame(); //i hope so
+
+        SpriteRenderer sr = this.gameObject.GetComponent<SpriteRenderer>();
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.3f);
+
+        yield return new WaitForSeconds(10f);
+
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
+        isStasis = false;
+        ResetHealth();
+    }
 
     void Start()
     {
+        ResetHealth();
+
         objSpikesFolder = GameObject.Find("Spikes");
         animator = GetComponent<Animator>();
 
@@ -21,7 +62,7 @@ public abstract class Cactus : MonoBehaviour
 
     private IEnumerator Run()
     {
-        if (!_isBursting)
+        if (!_isBursting && !isStasis)
         {
             Int32 burstId = UnityEngine.Random.Range(0, 4);
             switch (burstId)
@@ -116,5 +157,14 @@ public abstract class Cactus : MonoBehaviour
 
         yield return null;
 
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Projectile"))
+        {
+            GetDamage(25f);
+        }
     }
 }

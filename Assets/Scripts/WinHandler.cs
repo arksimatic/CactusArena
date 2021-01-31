@@ -51,6 +51,12 @@ public class WinHandler : MonoBehaviour
             //it notify SaveEndlessScore about new score
             this.gameObject.GetComponent<SaveEndlessScore>().NotifyAboutNewScore(Convert.ToSingle(GameObject.Find("txtCountdown").GetComponent<Text>().text));
         }
+        else
+        {
+            Player playerScript = player.GetComponent<Player>();
+            Single score = playerScript.Score + playerScript.KilledCacti * 25 + playerScript.Health;
+            PlayerPrefs.SetFloat("level" + thisLevelId + "score", score);
+        }
 
         PopupWindowLose.SetActive(true);
     }
@@ -97,12 +103,17 @@ public class WinHandler : MonoBehaviour
                 ReturnToTheGame();
         }
 
-        if(countdown.text == "0,00")
+        if(countdown.text == "0,00" || countdown.text == "0.00")
         {
             if (!alreadyWon)
             {
                 alreadyWon = true;
                 PlayerPrefs.SetInt("level" + thisLevelId, 1);
+
+                Player playerScript = player.GetComponent<Player>();
+                Single score = (playerScript.Score + playerScript.KilledCacti * 25 + playerScript.Health) * 2;
+                PlayerPrefs.SetFloat("level" + thisLevelId + "score", score);
+
                 AudioManager.Instance.Play("victory");
                 WinPopupWindow();
             }
