@@ -12,6 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private float slowStrength;
     private Rigidbody2D rb2d;
 
+    public SpriteRenderer spriteRenderer;
+
+    public Sprite sprKikut;
+    public Sprite sprNormal;
+
+    public ParticleSystem prtRunning;
+    public ParticleSystem prtRunning2;
+
     private bool isSlowed = false;
 
     void Start()
@@ -41,11 +49,24 @@ public class PlayerMovement : MonoBehaviour
 
         var changeX = Input.GetAxisRaw("Horizontal");
         var changeY = Input.GetAxisRaw("Vertical");
-        var actualMovementX =  changeX * speed * Time.deltaTime;
-        var actualMovementY =  changeY * speed * Time.deltaTime;
-        
-        if(changeX!=0 || changeY!=0)
+        var actualMovementX = changeX * speed * Time.deltaTime;
+        var actualMovementY = changeY * speed * Time.deltaTime;
+        var emission = prtRunning2.emission;
+        emission.enabled = false;
+        var emission1 = prtRunning.emission;
+        emission1.enabled = false;
+
+        this.spriteRenderer.sprite = sprNormal;
+
+        if (changeX != 0 || changeY != 0)
         {
+            spriteRenderer.flipX = changeX < 0;
+            this.spriteRenderer.sprite = sprKikut;
+            var emmission = prtRunning.emission;
+            emmission.enabled = true;
+            var emmission1 = prtRunning2.emission;
+            emmission1.enabled = true;
+
             animator.SetFloat("moveX", changeX);
             animator.SetFloat("moveY", changeY);
             transform.position = new Vector2(transform.position.x + actualMovementX, transform.position.y + actualMovementY);
@@ -54,13 +75,13 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", false);
-        }    
+        }
     }
 
     public void SlowPlayer(Single slowDuration, Single slowStrength)
     {
         this.slowStrength = slowStrength;
-        if(!isSlowed)
+        if (!isSlowed)
             StartCoroutine("Slow", slowDuration);
     }
 

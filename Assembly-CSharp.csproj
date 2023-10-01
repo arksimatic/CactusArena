@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Mobs\NormalSpike.cs" />
     <Compile Include="Assets\Scripts\BarrierControl.cs" />
     <Compile Include="Assets\Scripts\Mobs\FreezingCactus.cs" />
+    <Compile Include="Assets\Kapar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

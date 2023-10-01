@@ -57,6 +57,7 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator LoadSceneAfterTime(int indexOfSceneToLoad)
     {
+        print(indexOfSceneToLoad);
         yield return new WaitForSeconds(fadingTime);
         SceneManager.LoadScene(indexOfSceneToLoad);
         yield return null;
